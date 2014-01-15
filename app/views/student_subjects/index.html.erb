@@ -1,0 +1,33 @@
+<div class="content">
+  <h1>List of Student Subjects</h1>
+  <hr>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Subject ID</th>
+        <th>Date Enrolled</th>
+        <th>Date Completed</th>
+        <th>Letter Grade</th>
+        <th>Numberic Grade</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @student_subjects.each do |student_subject| %>
+        <tr>
+          <td><%= ss.student_id %></td>
+          <td><%= ss.subject_id %></td>
+          <td><%= ss.date_enrolled %></td>
+          <td><%= ss.date_completed %></td>
+          <td><%= ss.letter_grade %></td>
+          <td><%= ss.number_grade %></td>
+          <td>
+            <%= link_to "Edit", edit_student_subject_path(student_subject.id) %>
+            <%= link_to "Delete", student_subject_path(student_subject.id), method: :delete, confirm: "Are you sure?" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

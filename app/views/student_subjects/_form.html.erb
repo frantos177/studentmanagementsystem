@@ -1,0 +1,9 @@
+<%= simple_form_for(student_subject defaults: { wrapper_html: { class: 'form-group' }, input_html: { class: 'form-control' } }) do |f| %>
+  <%= f.input :student_id %>
+  <%= f.input :subject_id %>
+  <%= f.input :date_enrolled %>
+  <%= f.input :date_completed %>
+  <%= f.input :letter_grade %>
+  <hr>
+  <%= f.submit "Save Student Subject" %>
+<% end %>
