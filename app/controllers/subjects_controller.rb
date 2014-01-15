@@ -1,4 +1,4 @@
-class subjects_controller < application_controller
+class SubjectsController < ApplicationController
 
 	def index
 		@subjects = Subject.all

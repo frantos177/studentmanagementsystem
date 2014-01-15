@@ -1,4 +1,4 @@
-class student_subjects_controller < application_controller
+class StudentSubjectsController < ApplicationController
 
 	def index
 		@student_subjects = Student_subject.all
